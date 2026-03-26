@@ -1,0 +1,30 @@
+---
+title: "Offer Letter Request"
+---
+
+Use the form below (or the button) to submit an offer letter request for a new or existing graduate student.
+The form will notify the Graduate Program Coordinator and relevant staff once submitted.
+
+[Submit Offer Letter Request](https://docs.google.com/forms/d/e/1FAIpQLSe0q-LN2kvyNy2Nl7FwMs0C140NnxNQKsWq1M8S4VjGG4QniQ/viewform){.btn .btn-primary}
+
+## What to Prepare
+
+Before filling out the form, have the following information ready:
+
+- **Student name** — full legal name for new admits, or select from the dropdown for existing students
+- **Degree program** — MS or PhD
+- **Funding sources and cost objects** — one per line, separated by `|`
+- **Annual salary / stipend amount**
+- **Funding breakdown by cost object**
+- **Funding start and end dates**
+- **Years of secured funding**
+- **Funding plan beyond the secured period** (new students only, if fewer than 4 years secured)
+
+## After Submission
+
+Once the form is submitted:
+
+1. An email summary is sent to the Graduate Program Coordinator and staff.
+2. The offer letter is generated and shared with you.
+
+For questions, contact the Graduate Committee Chair at [tmieno2@nebraska.edu](mailto:tmieno2@nebraska.edu).

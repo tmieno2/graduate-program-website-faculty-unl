@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graduate Studies in Agricultural Economics — University of Nebraska–Lincoln</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --scarlet: #D00000;
+    --scarlet-dark: #A00000;
+    --cream: #F8F5F0;
+    --white: #FFFFFF;
+    --ink: #181818;
+    --mid: #3D3D3D;
+    --muted: #6B6B6B;
+    --rule: #DDD8D0;
+    --accent-bg: #F2EDE5;
+    --sidebar-w: 268px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    background: var(--cream);
+    color: var(--ink);
+    display: flex;
+  }
+
+  /* SIDEBAR */
+  #sidebar {
+    position: fixed;
+    top: 0; left: 0;
+    width: var(--sidebar-w);
+    height: 100vh;
+    background: var(--ink);
+    overflow-y: auto;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+  }
+  #sidebar::-webkit-scrollbar { width: 3px; }
+  #sidebar::-webkit-scrollbar-thumb { background: #444; }
+
+  .sb-brand {
+    background: var(--scarlet);
+    padding: 24px 20px 20px;
+    flex-shrink: 0;
+  }
+  .sb-brand .unl {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 5px;
+  }
+  .sb-brand .dept {
+    font-family: 'Barlow', sans-serif;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.35;
+  }
+
+  .sb-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #555;
+    padding: 20px 20px 6px;
+  }
+
+  #sidebar a {
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+    padding: 6px 20px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 12.5px;
+    font-weight: 400;
+    color: #999;
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    line-height: 1.4;
+    transition: color 0.12s, border-color 0.12s, background 0.12s;
+  }
+  #sidebar a .n {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #444;
+    flex-shrink: 0;
+    min-width: 22px;
+  }
+  #sidebar a:hover { color: #fff; background: rgba(255,255,255,0.05); border-left-color: #555; }
+  #sidebar a.active { color: #fff; border-left-color: var(--scarlet); background: rgba(208,0,0,0.1); }
+  #sidebar a.active .n { color: var(--scarlet); }
+
+  /* MAIN */
+  #main { margin-left: var(--sidebar-w); flex: 1; min-width: 0; }
+
+  /* COVER */
+  #cover {
+    background: var(--ink);
+    padding: 80px 72px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  #cover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(255,255,255,0.015) 40px, rgba(255,255,255,0.015) 41px);
+    pointer-events: none;
+  }
+  .cover-rule { width: 48px; height: 3px; background: var(--scarlet); margin-bottom: 28px; }
+  #cover h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.15;
+    max-width: 560px;
+    margin-bottom: 14px;
+  }
+  #cover .cover-sub {
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 40px;
+    letter-spacing: 0.02em;
+  }
+  .cover-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+  .pill {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 13px;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.55);
+    border-radius: 2px;
+  }
+  .pill.red { border-color: rgba(208,0,0,0.6); color: rgba(208,0,0,0.85); }
+
+  /* CONTENT */
+  #content { max-width: 800px; margin: 0 auto; padding: 64px 72px 100px; }
+
+  /* TOC */
+  .toc {
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--scarlet);
+    background: var(--white);
+    padding: 32px 36px 28px;
+    margin-bottom: 72px;
+  }
+  .toc-heading {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--scarlet);
+    margin-bottom: 22px;
+  }
+  .toc ol { list-style: none; }
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    padding: 5px 0;
+    border-bottom: 1px dotted var(--rule);
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    color: var(--scarlet);
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .toc-item a {
+    font-family: 'Barlow', sans-serif;
+    font-size: 13.5px;
+    font-weight: 400;
+    color: var(--mid);
+    text-decoration: none;
+    flex: 1;
+    line-height: 1.4;
+  }
+  .toc-item a:hover { color: var(--scarlet); }
+  .toc-pg {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    color: #bbb;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+  .toc-sub .toc-num { color: #aaa; font-size: 10px; padding-left: 12px; }
+  .toc-sub a { font-size: 12.5px; color: var(--muted); }
+
+  /* SECTIONS */
+  .section { margin-bottom: 72px; scroll-margin-top: 24px; }
+
+  .sec-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .sec-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--white);
+    background: var(--scarlet);
+    padding: 3px 9px;
+    border-radius: 2px;
+    letter-spacing: 0.06em;
+  }
+  .sec-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .section > h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--rule);
+  }
+
+  .subsection { margin: 28px 0 0; }
+  .subsection h3 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 14px;
+    padding-left: 12px;
+    border-left: 3px solid var(--scarlet);
+  }
+
+  /* BODY TEXT */
+  p {
+    font-size: 14.5px;
+    line-height: 1.82;
+    color: var(--mid);
+    margin-bottom: 14px;
+  }
+  p:last-child { margin-bottom: 0; }
+  a { color: var(--scarlet-dark); word-break: break-all; }
+  a:hover { text-decoration: underline; }
+
+  /* BULLET LISTS */
+  .doc-list { list-style: none; margin: 12px 0 16px; }
+  .doc-list li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 14.5px;
+    line-height: 1.72;
+    color: var(--mid);
+    padding: 4px 0;
+  }
+  .doc-list li::before {
+    content: '•';
+    color: var(--scarlet);
+    font-size: 16px;
+    line-height: 1.55;
+    flex-shrink: 0;
+  }
+  .doc-list.numbered { counter-reset: item; }
+  .doc-list.numbered li::before {
+    content: counter(item) ')';
+    counter-increment: item;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--scarlet);
+    min-width: 20px;
+    padding-top: 3px;
+    line-height: 1.9;
+  }
+
+  /* COURSE BOX */
+  .course-box { border: 1px solid var(--rule); background: var(--white); margin: 18px 0; overflow: hidden; border-radius: 2px; }
+  .course-box-head {
+    background: var(--ink);
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+  }
+  .course-row {
+    display: flex;
+    gap: 0;
+    align-items: baseline;
+    padding: 9px 16px;
+    border-bottom: 1px solid var(--rule);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .course-row:last-child { border-bottom: none; }
+  .course-row:nth-child(even) { background: #FAFAF8; }
+  .course-code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    font-weight: 500;
+    color: var(--scarlet);
+    min-width: 140px;
+    flex-shrink: 0;
+  }
+  .course-title { color: var(--mid); flex: 1; }
+  .course-cr {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #999;
+    margin-left: 12px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .course-note {
+    font-size: 12.5px;
+    color: var(--muted);
+    font-style: italic;
+    padding: 7px 16px 10px;
+    border-top: 1px solid var(--rule);
+    background: var(--accent-bg);
+  }
+
+  /* CALLOUT */
+  .callout {
+    display: flex;
+    gap: 14px;
+    padding: 16px 20px;
+    margin: 18px 0;
+    border-radius: 2px;
+    border: 1px solid var(--rule);
+    background: var(--white);
+    font-size: 14px;
+    line-height: 1.72;
+    color: var(--mid);
+  }
+  .callout.warn { border-left: 4px solid #D08000; }
+  .callout.deadline { border-left: 4px solid var(--scarlet); background: #FFF8F8; }
+  .callout-icon { font-size: 17px; flex-shrink: 0; margin-top: 1px; }
+  .callout strong { color: var(--ink); }
+
+  /* FORMS TABLE */
+  .forms-table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 16px 0; }
+  .forms-table th {
+    background: var(--ink);
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 9px 14px;
+    text-align: left;
+  }
+  .forms-table td {
+    padding: 9px 14px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--mid);
+    line-height: 1.6;
+    vertical-align: top;
+    font-size: 13.5px;
+  }
+  .forms-table tr:last-child td { border-bottom: none; }
+  .forms-table tr:nth-child(even) td { background: #FAFAF8; }
+  .forms-table td:first-child {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+    font-size: 13px;
+  }
+
+  /* PROGRAM GRID */
+  .program-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; margin: 20px 0; }
+  .pg-cell {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    padding: 14px 10px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .pg-cell .yr {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--scarlet);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .pg-cell .cr { color: var(--muted); font-size: 11px; }
+  .pg-sub {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    margin-top: 3px;
+  }
+  .pg-sub-item {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    padding: 10px 12px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 12px;
+    color: var(--mid);
+    line-height: 1.5;
+  }
+  .pg-sub-item .label {
+    font-size: 10px;
+    color: var(--muted);
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+
+  /* DIVIDER */
+  .sdiv { border: none; border-top: 1px solid var(--rule); margin: 64px 0; }
+
+  /* FOOTER */
+  #footer {
+    background: var(--ink);
+    margin-left: var(--sidebar-w);
+    padding: 36px 72px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 12px;
+    color: #555;
+    line-height: 1.7;
+  }
+  #footer strong { color: #999; }
+  #footer a { color: #777; word-break: break-all; }
+
+  @media (max-width: 880px) {
+    :root { --sidebar-w: 0px; }
+    #sidebar { display: none; }
+    #main { margin-left: 0; }
+    #footer { margin-left: 0; }
+    #content { padding: 40px 24px 80px; }
+    #cover { padding: 48px 24px 44px; }
+  }
+</style>
+</head>
+<body>
+
+<aside id="sidebar">
+  <div class="sb-brand">
+    <div class="unl">University of Nebraska–Lincoln</div>
+    <div class="dept">Department of Agricultural Economics</div>
+  </div>
+
+  <div class="sb-label">Overview</div>
+  <a href="#intro"><span class="n">—</span>Introduction</a>
+
+  <div class="sb-label">Admissions Requirements</div>
+  <a href="#adm-ms"><span class="n">A1</span>M.S. in Agricultural Economics</a>
+  <a href="#adm-double-as"><span class="n">A2</span>Double Major — Animal Science</a>
+  <a href="#adm-double-stat"><span class="n">A3</span>Double Major — Statistics</a>
+  <a href="#adm-accel"><span class="n">A4</span>Accelerated Master's Degree</a>
+  <a href="#adm-phd"><span class="n">A5</span>Ph.D. in Agricultural Economics</a>
+  <a href="#adm-joint"><span class="n">A6</span>Joint Ag Econ &amp; Statistics Ph.D.</a>
+
+  <div class="sb-label">Degree Requirements</div>
+  <a href="#req-ms"><span class="n">1</span>M.S. in Agricultural Economics</a>
+  <a href="#req-double-as"><span class="n">2</span>Double Major — Animal Science</a>
+  <a href="#req-double-stat"><span class="n">3</span>Double Major — Statistics</a>
+  <a href="#req-accel"><span class="n">4</span>Accelerated Master's Program</a>
+  <a href="#req-phd"><span class="n">5</span>Ph.D. in Agricultural Economics</a>
+  <a href="#req-joint"><span class="n">6</span>Joint Ag Econ &amp; Statistics Ph.D.</a>
+
+  <div class="sb-label">Policies</div>
+  <a href="#progress"><span class="n">7</span>Progress Reports</a>
+  <a href="#assistantships"><span class="n">8</span>Assistantships</a>
+  <a href="#evaluation"><span class="n">9</span>Evaluation &amp; Reappointment of GRAs</a>
+  <a href="#thesis-policies"><span class="n">10</span>Thesis &amp; Dissertation Policies</a>
+  <a href="#scholastic"><span class="n">11</span>Scholastic Guidelines</a>
+</aside>
+
+<div id="main">
+
+  <header id="cover">
+    <div class="cover-rule"></div>
+    <h1>Graduate Studies in Agricultural Economics</h1>
+    <p class="cover-sub">University of Nebraska–Lincoln · Department of Agricultural Economics</p>
+    <div class="cover-pills">
+      <div class="pill red">M.S. Program</div>
+      <div class="pill red">Ph.D. Program</div>
+      <div class="pill">STEM Designated</div>
+      <div class="pill">Last Update: March 2022</div>
+    </div>
+  </header>
+
+  <div id="content">
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc" id="toc">
+      <div class="toc-heading">Table of Contents</div>
+      <ol>
+        <li class="toc-item"><span class="toc-num">—</span><a href="#intro">Introduction</a><span class="toc-pg">p. 2</span></li>
+        <li class="toc-item toc-sub"><span class="toc-num">A1</span><a href="#adm-ms">Master of Science (M.S.) in Agricultural Economics</a><span class="toc-pg">p. 3</span></li>
+        <li class="toc-item toc-sub"><span class="toc-num">A2</span><a href="#adm-double-as">Master of Science with Double Major in Agricultural Economics and Animal Science</a><span class="toc-pg">p. 3</span></li>
+        <li class="toc-item toc-sub"><span class="toc-num">A3</span><a href="#adm-double-stat">Master of Science with Double Major in Agricultural Economics and Statistics</a><span class="toc-pg">p. 4</span></li>
+        <li class="toc-item toc-sub"><span class="toc-num">A4</span><a href="#adm-accel">Accelerated Master's Degree</a><span class="toc-pg">p. 4</span></li>
+        <li class="toc-item toc-sub"><span class="toc-num">A5</span><a href="#adm-phd">Doctor of Philosophy (Ph.D.) in Agricultural Economics</a><span class="toc-pg">p. 5</span></li>
+        <li class="toc-item toc-sub"><span class="toc-num">A6</span><a href="#adm-joint">Joint Agricultural Economics and Statistics Ph.D.</a><span class="toc-pg">p. 5</span></li>
+        <li class="toc-item"><span class="toc-num">—</span><a href="#degree-req-header">Degree Requirements</a><span class="toc-pg">p. 6</span></li>
+        <li class="toc-item toc-sub"><span class="toc-num">1</span><a href="#req-ms">Master of Science (M.S.) in Agricultural Economics</a><span class="toc-pg">p. 6</span></li>
+        <li class="toc-item toc-sub"><span class="toc-num">2</span><a href="#req-double-as">Master of Science with Double Major in Agricultural Economics and Animal Science</a><span class="toc-pg">p. 7</span></li>
+        <li class="toc-item toc-sub"><span class="toc-num">3</span><a href="#req-double-stat">Master of Science with Double Major in Agricultural Economics and Statistics</a><span class="toc-pg">p. 8</span></li>
+        <li class="toc-item toc-sub"><span class="toc-num">4</span><a href="#req-accel">Accelerated Master's Degree Program</a><span class="toc-pg">p. 9</span></li>
+        <li class="toc-item toc-sub"><span class="toc-num">5</span><a href="#req-phd">Doctor of Philosophy (Ph.D.) in Agricultural Economics</a><span class="toc-pg">p. 10</span></li>
+        <li class="toc-item toc-sub"><span class="toc-num">6</span><a href="#req-joint">Joint Agricultural Economics and Statistics Ph.D.</a><span class="toc-pg">p. 12</span></li>
+        <li class="toc-item"><span class="toc-num">7</span><a href="#progress">Progress Reports</a><span class="toc-pg">p. 13</span></li>
+        <li class="toc-item"><span class="toc-num">8</span><a href="#assistantships">Assistantships</a><span class="toc-pg">p. 13</span></li>
+        <li class="toc-item"><span class="toc-num">9</span><a href="#evaluation">Evaluation, Reappointment, and Reassignment of GRAs</a><span class="toc-pg">p. 14</span></li>
+        <li class="toc-item"><span class="toc-num">10</span><a href="#thesis-policies">Thesis and Dissertation Policies</a><span class="toc-pg">p. 14</span></li>
+        <li class="toc-item"><span class="toc-num">11</span><a href="#scholastic">Scholastic Guidelines</a><span class="toc-pg">p. 15</span></li>
+      </ol>
+    </div>
+
+    <!-- INTRODUCTION -->
+    <section class="section" id="intro">
+      <div class="sec-eyebrow"><span class="sec-tag">Overview</span></div>
+      <h2>Introduction</h2>
+      <p>The Department of Agricultural Economics offers a number of degree opportunities, both within the agricultural economics discipline as well as in a number of interdisciplinary and trans‐disciplinary areas.</p>
+      <p>The Doctor of Philosophy (Ph.D.) and Master of Science (M.S.) are the two agricultural economics discipline programs offered directly in the department. Thesis and non‐thesis options for the M.S. are available with options A and B. An accelerated B.S./M.S. program is also available.</p>
+      <p>The department also offers a Joint Agricultural Economics and Statistics Ph.D., and an M.S. with a Double Major in Agricultural Economics and Animal Science, and an M.S. with a Double Major in Agricultural Economics and Statistics.</p>
+      <p>Department faculty also collaborate with and teach courses in a number of other interdisciplinary graduate programs on campus, including the Great Plains Interactive Distance Education Alliance (IDEA) Community Development program offered through the Master of Agriculture degree. Another program with this interdisciplinary character is the Human Dimensions of Natural Resources Specialization within the M.S. and Ph.D. programs of the School of Natural Resources. Graduate students in the M.S. and Ph.D. programs of the department can take courses, and otherwise interact with students and faculty in these interdisciplinary programs.</p>
+      <p>The following rules and procedures reflect department and Office of Graduate Studies policies, and every effort will be made to keep them current. Students are responsible for familiarizing themselves with the Graduate Catalog and the Graduate Studies requirements and procedures (<a href="https://www.unl.edu/gradstudies/academics/degrees">https://www.unl.edu/gradstudies/academics/degrees</a>).</p>
+      <p>Aside from department and Graduate Studies requirements, the structuring and supervision of each student's academic and research programs are the primary responsibility of the student, the advisor, and the supervisory committee. Students are expected to work closely with their advisor and supervisory committee, particularly in the conduct of research.</p>
+    </section>
+
+    <hr class="sdiv">
+
+    <!-- ADMISSIONS HEADER -->
+    <section class="section" id="admissions-header">
+      <div class="sec-eyebrow"><span class="sec-tag">Admissions</span></div>
+      <h2>Admissions Requirements</h2>
+      <p>We seek students of high ability and commitment from a diverse array of cultural and academic backgrounds.</p>
+    </section>
+
+    <!-- A1 -->
+    <section class="section" id="adm-ms">
+      <div class="sec-eyebrow"><span class="sec-num">A1</span><span class="sec-tag">Admissions</span></div>
+      <h2>Master of Science (M.S.) in Agricultural Economics</h2>
+      <p>To be admitted to the M.S. program in Agricultural Economics, students must have completed the following courses or their equivalents:</p>
+      <ul class="doc-list">
+        <li><strong>Economics Courses:</strong> intermediate microeconomics, intermediate macroeconomics (Equivalent to UNL courses ECON 311A and ECON 312A)</li>
+        <li><strong>Quantitative Courses:</strong> introduction to statistics, introductory integral and differential calculus</li>
+      </ul>
+      <p>Applicants must submit transcripts, a statement of purpose, resume, and three letters of recommendation. The GRE exam is preferred. In the past five years, most candidates admitted to our graduate program with financial assistantships have submitted their GRE results. Institution code for UNL is 6877.</p>
+      <p>Official verification of English proficiency is required for students whose native language is not English. Exemptions for the English proficiency requirement are granted for non-native speakers who have received a bachelor's or more advanced degree either from an accredited U.S. institution or from a university outside the U.S. at which English is the official language of instruction. Additional information on English proficiency requirements and exemptions can be found at: <a href="http://www.unl.edu/gradstudies/prospective/international/english">http://www.unl.edu/gradstudies/prospective/international/english</a>.</p>
+      <div class="callout deadline"><span class="callout-icon">📅</span><span>To be fully considered for financial assistance, all application materials should be submitted by <strong>December 31</strong>.</span></div>
+    </section>
+
+    <!-- A2 -->
+    <section class="section" id="adm-double-as">
+      <div class="sec-eyebrow"><span class="sec-num">A2</span><span class="sec-tag">Admissions</span></div>
+      <h2>Master of Science with Double Major in Agricultural Economics and Animal Science</h2>
+      <p>Students admitted for graduate study leading to the M.S. with double major in Agricultural Economics and Animal Science must have completed the following courses or their equivalents:</p>
+      <ul class="doc-list">
+        <li><strong>Economics Courses:</strong> intermediate microeconomics, intermediate macroeconomics (Equivalent to UNL courses ECON 311A and ECON 312A)</li>
+        <li><strong>Quantitative Courses:</strong> introduction to statistics, introductory integral and differential calculus</li>
+      </ul>
+      <p>Strongly recommended: Three semesters of biological sciences, three semesters of chemistry, including organic chemistry.</p>
+      <p>Prospective students for the M.S. with double major in Agricultural Economics and Animal Science must submit transcripts, a statement of purpose regarding educational and career goals, resume, letters of recommendation, and GRE scores.</p>
+      <p>Official verification of English proficiency is required for students whose native language is not English. Exemptions for the English proficiency requirement are granted for non-native speakers who have received a bachelor's or more advanced degree either from an accredited U.S. institution or from a university outside the U.S. at which English is the official language of instruction. Additional information on English proficiency requirements and exemptions can be found at: <a href="http://www.unl.edu/gradstudies/prospective/international/english">http://www.unl.edu/gradstudies/prospective/international/english</a>.</p>
+    </section>
+
+    <!-- A3 -->
+    <section class="section" id="adm-double-stat">
+      <div class="sec-eyebrow"><span class="sec-num">A3</span><span class="sec-tag">Admissions</span></div>
+      <h2>Master of Science with Double Major in Agricultural Economics and Statistics</h2>
+      <p>Students admitted for graduate study leading to the M.S. with double major in Agricultural Economics and Statistics must have completed the following courses or their equivalents:</p>
+      <ul class="doc-list">
+        <li>At least one course in statistics</li>
+        <li>Introductory integral and differential calculus</li>
+        <li>Matrix algebra</li>
+        <li>Intermediate macroeconomics (UNL ECON 311A)</li>
+        <li>Intermediate microeconomics (UNL ECON 312A)</li>
+      </ul>
+      <p>Students must have attained a 3.00 GPA or better in the above courses.</p>
+      <p>Prospective students for the M.S. with double major in Agricultural Economics and Statistics must submit transcripts, a statement of purpose, resume, three letters of recommendation, and GRE scores.</p>
+      <p>Official verification of English proficiency is required for students whose native language is not English. Exemptions for the English proficiency requirement are granted for non-native speakers who have received a bachelor's or more advanced degree either from an accredited U.S. institution or from a university outside the U.S. at which English is the official language of instruction. Additional information on English proficiency requirements and exemptions can be found at: <a href="http://www.unl.edu/gradstudies/prospective/international/english">http://www.unl.edu/gradstudies/prospective/international/english</a>.</p>
+    </section>
+
+    <!-- A4 -->
+    <section class="section" id="adm-accel">
+      <div class="sec-eyebrow"><span class="sec-num">A4</span><span class="sec-tag">Admissions</span></div>
+      <h2>Accelerated Master's Degree</h2>
+      <p>The program offers an opportunity to complete both an undergraduate degree in agribusiness, agricultural economics, or natural resources and environmental economics and a graduate degree in agricultural economics within five years. Up to 12 hours of credit will apply toward both the B.S. and M.S. degree.</p>
+      <p>The admissions requirements are:</p>
+      <ul class="doc-list">
+        <li><strong>GPA:</strong> 3.0 cumulative, plus a 3.5 average in MATH 104/106, ECON 311A, ECON 312A, and STAT 218.</li>
+        <li>Admission decision will be based on academic performance, letters of reference, and statement of purpose.</li>
+        <li>Students are encouraged to apply to the program during the second semester of their junior year.</li>
+        <li>Admission to the graduate program remains conditional until the student completes the baccalaureate degree.</li>
+        <li>Students who earn a 3.0 average in AECN 872, AECN 873, and AECN 821 will be automatically admitted to the graduate program if they fulfill Graduate Studies' requirements for admission.</li>
+      </ul>
+    </section>
+
+    <!-- A5 -->
+    <section class="section" id="adm-phd">
+      <div class="sec-eyebrow"><span class="sec-num">A5</span><span class="sec-tag">Admissions</span></div>
+      <h2>Doctor of Philosophy (Ph.D.) in Agricultural Economics</h2>
+      <p>The Ph.D. program is open to students with a master's degree and a minimum GPA of 3.0 on a scale of 4.0. Students without a master's degree will also be considered but they must have completed or complete after admission the equivalent of the core requirements for the master's degree in agricultural economics.</p>
+      <p>Prerequisite coursework includes:</p>
+      <ul class="doc-list">
+        <li><strong>Economics Courses:</strong> M.S.-level microeconomics, macroeconomics, and econometrics</li>
+        <li><strong>Quantitative Courses:</strong> integral and differential calculus, linear algebra, statistics</li>
+      </ul>
+      <p>Field courses in areas of interest are desirable although not required. These include industrial organization, international trade, environmental economics, and development economics.</p>
+      <p>The GRE exam is preferred. In the past five years, most candidates admitted to our graduate program with financial assistantships have submitted their GRE results. Institution code for UNL is 6877.</p>
+      <p>Official verification of English proficiency is required for students whose native language is not English. Exemptions for the English proficiency requirement are granted for non-native speakers who have received a bachelor's or more advanced degree either from an accredited U.S. institution or from a university outside the U.S. at which English is the official language of instruction. Additional information on English proficiency requirements and exemptions can be found at: <a href="http://www.unl.edu/gradstudies/prospective/international/english">http://www.unl.edu/gradstudies/prospective/international/english</a>.</p>
+      <div class="callout deadline"><span class="callout-icon">📅</span><span>To be fully considered for financial assistance, all application materials should be submitted by <strong>December 31</strong>.</span></div>
+    </section>
+
+    <!-- A6 -->
+    <section class="section" id="adm-joint">
+      <div class="sec-eyebrow"><span class="sec-num">A6</span><span class="sec-tag">Admissions</span></div>
+      <h2>Joint Agricultural Economics and Statistics Ph.D.</h2>
+      <p>A student may apply to the joint program as a new student or as a current student from one of the individual programs. Admission must be approved by the graduate chairs from both departments.</p>
+      <p>Students entering the joint program are expected to meet the admission requirements for the Agricultural Economics Ph.D. program and the Statistics Ph.D. program. Students without these requirements can be provisionally accepted into the joint Ph.D. program but must remove any deficiencies within the first year. This provisional status will be removed when all provisions are satisfied.</p>
+    </section>
+
+    <hr class="sdiv">
+
+    <!-- DEGREE REQUIREMENTS HEADER -->
+    <section class="section" id="degree-req-header">
+      <div class="sec-eyebrow"><span class="sec-tag">Degree Requirements</span></div>
+      <h2>Degree Requirements</h2>
+    </section>
+
+    <!-- 1 -->
+    <section class="section" id="req-ms">
+      <div class="sec-eyebrow"><span class="sec-num">1</span><span class="sec-tag">Degree Requirements</span></div>
+      <h2>Master of Science (M.S.) in Agricultural Economics</h2>
+      <p>The M.S. in Agricultural Economics can be either thesis (option A) or non‐thesis option (option B). The thesis option requires 30 hours of graduate credit including the thesis, while the non-thesis option requires 30 hours of graduate credit. Additional detail is found in the Graduate Catalog (<a href="https://catalog.unl.edu/graduate-professional/graduate/">https://catalog.unl.edu/graduate-professional/graduate/</a>).</p>
+
+      <div class="subsection">
+        <h3>Core Courses</h3>
+        <p>The following courses or their equivalents are required of all M.S. students. Students are expected to take the core as early as possible in their program (typically the first semester when starting the program in the fall semester).</p>
+        <div class="course-box">
+          <div class="course-box-head">Required Core Courses — All M.S. Students</div>
+          <div class="course-row"><span class="course-code">AECN 821</span><span class="course-title">Orientation to Research in Agricultural Economics</span><span class="course-cr">1 sem. hr.</span></div>
+          <div class="course-row"><span class="course-code">AECN 872</span><span class="course-title">Mathematical Tools for Applied Economics</span><span class="course-cr">1 sem. hr.</span></div>
+          <div class="course-row"><span class="course-code">AECN/ECON 873</span><span class="course-title">Microeconomic Models and Applications</span><span class="course-cr">3 sem. hrs.</span></div>
+          <div class="course-row"><span class="course-code">AECN 896-003</span><span class="course-title">Applied Econometrics</span><span class="course-cr">4 sem. hrs.</span></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Option A — Thesis</h3>
+        <p>Option A requires a minimum of 30 credit hours, including 20 to 24 credit hours of regular coursework. A thesis, equivalent to 6 to 10 credit hours is required. At least half of the required work, including thesis, must be in one major subject. Eight credit hours, excluding thesis credit hours, must be in graduate-only courses. Thesis credit will be granted only on a Pass/No Pass basis. Pass/No Pass should be selected when students register for thesis credit.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Option B — Non-Thesis</h3>
+        <p>Option B requires a minimum of 30 credit hours. No thesis is required, and no minor is available. At least 15 credit hours must be in graduate-only courses and at least 15 credit hours must be in the major.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Forms</h3>
+        <p>The following forms with associated deadlines are required for candidacy and completion of a master's degree. They can be accessed at <a href="http://www.unl.edu/gradstudies/current/degrees/masters">http://www.unl.edu/gradstudies/current/degrees/masters</a>.</p>
+        <table class="forms-table">
+          <thead><tr><th>#</th><th>Form</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Memorandum of Courses</td><td>Should be filed by the student prior to completion of half of the program. This is the first Graduate Studies form that identifies the student's advisor and program. It is available at <a href="http://www.unl.edu/gradstudies/current/Masters-Memorandum.pdf">http://www.unl.edu/gradstudies/current/Masters-Memorandum.pdf</a>. Following the removal of deficiencies and the filing of the memorandum of courses, an M.S. student is admitted to candidacy.</td></tr>
+            <tr><td>2</td><td>Application for Graduation</td><td>Applications instruction can be found here: <a href="http://registrar.unl.edu/graduation-application">http://registrar.unl.edu/graduation-application</a>. The completed application and payment should be filed with Graduation Services before the deadline date for the expected graduation term (usually the end of the second week of that term).</td></tr>
+            <tr><td>3</td><td>Application for Final Oral Examination</td><td>The Final Examination Report Form should be submitted to Graduate Studies at least four weeks prior to the proposed date of the oral exam or by the date specified on the calendar of deadlines. This form requests approval to hold the exam on a specific date and identifies the members of the examining committee. Download the form at <a href="http://www.unl.edu/gradstudies/current/Masters-FinalExam.pdf">http://www.unl.edu/gradstudies/current/Masters-FinalExam.pdf</a>.</td></tr>
+            <tr><td>4</td><td>Final Steps</td><td>Upon receipt of the Application for Final Oral Exam, final instructions will be provided to the student by Graduate Studies. To ensure that these final steps go smoothly, instructions at <a href="http://www.unl.edu/gradstudies/current/degrees/masters">http://www.unl.edu/gradstudies/current/degrees/masters</a> should be read with care.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subsection">
+        <h3>M.S. Supervisory Committee</h3>
+        <p>A supervisory committee for M.S. students is optional. If chosen, the committee consists of three graduate faculty members. The committee approves and oversees the student's program and conducts the final exam. A form for establishing the committee is included at the end of this handbook. If a committee is not elected, the student's major advisor, identified in the memorandum of courses, approves and oversees the student's program and thesis. In this case, a final exam committee of three graduate faculty is proposed later when the final exam report form is submitted.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>M.S. Thesis</h3>
+        <p>A master's thesis and abstract in preliminary form must be approved by the advisor prior to applying for the final oral examination, at least four weeks prior to the final oral examination date (<a href="http://www.unl.edu/gradstudies/current/degrees/masters#thesis">http://www.unl.edu/gradstudies/current/degrees/masters#thesis</a>).</p>
+      </div>
+
+      <div class="subsection">
+        <h3>M.S. Final Oral Examination</h3>
+        <p>A student whose program includes a minor in another department may be required to take a comprehensive examination in his/her minor field. Comprehensive examinations in a minor field may be waived subject to the approval of both the major and minor departments, providing all grades in the minor are "B" or higher. Each student should arrange with his/her advisor and/or supervisory committee for taking minor comprehensive exams or for having them waived. The minor department determines the nature of comprehensive exams if any are required.</p>
+        <p>A final oral examination is required by the Department and is administered by the examining committee. (<a href="https://www.unl.edu/gradstudies/academics/program-steps/masters-degree-steps-to-completion">https://www.unl.edu/gradstudies/academics/program-steps/masters-degree-steps-to-completion</a>)</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Time Limits</h3>
+        <div class="callout warn"><span class="callout-icon">⚠️</span><span>The work required for a master's degree must be completed within <strong>five consecutive years</strong>. Coursework exceeding five years will not apply toward the partial fulfillment of the degree requirements for master's degrees at UNL.</span></div>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section class="section" id="req-double-as">
+      <div class="sec-eyebrow"><span class="sec-num">2</span><span class="sec-tag">Degree Requirements</span></div>
+      <h2>Master of Science with Double Major in Agricultural Economics and Animal Science</h2>
+      <p>The student must meet at least the minimum requirements for Agricultural Economics and Animal Science. This includes credit from graduate coursework and thesis of not fewer than 15 credit hours in each discipline. The thesis is expected to be 6 to 10 credit hours divided between the two majors. For each of the majors, students must earn at least 8 credit hours in courses open only to graduate students (800-level without 400-level counterparts, or 900-level courses).</p>
+
+      <div class="subsection">
+        <h3>Core Courses</h3>
+        <p>The following courses or their equivalents are required of all students in the M.S. with double major in Agricultural Economics and Animal Science:</p>
+        <div class="course-box">
+          <div class="course-box-head">Agricultural Economics</div>
+          <div class="course-row"><span class="course-code">AECN 821</span><span class="course-title">Orientation to Research in Agricultural Economics</span></div>
+          <div class="course-row"><span class="course-code">AECN 872</span><span class="course-title">Mathematical Tools for Applied Economics</span><span class="course-cr">1 sem. hr.</span></div>
+          <div class="course-row"><span class="course-code">AECN 873</span><span class="course-title">Microeconomic Models with Applications</span></div>
+          <div class="course-row"><span class="course-code">AECN 896-003</span><span class="course-title">Applied Econometrics</span></div>
+        </div>
+        <div class="course-box">
+          <div class="course-box-head">Animal Science</div>
+          <div class="course-row"><span class="course-code">ASCI 806</span><span class="course-title">Animal Science Graduate Seminar</span></div>
+        </div>
+      </div>
+
+      <p>Students must pass a written comprehensive exam.</p>
+      <p>Students must complete a research thesis (only Option A is available to double M.S. major in Agricultural Economics and Animal Science). Additionally, students are required to maintain satisfactory progress towards their degree by maintaining at least a 3.00 GPA.</p>
+
+      <div class="subsection">
+        <h3>M.S. Supervisory Committee</h3>
+        <p>Students must assemble a committee of two faculty members from the Agricultural Economics department and two faculty members from the Animal Science department. The committee is to be co-chaired by a faculty member from each department.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Memorandum of Courses</h3>
+        <p>The student's committee, comprising two faculty members from the Agricultural Economics department and two faculty members from the Animal Science department, must approve the Memorandum of Courses. The Memorandum of Courses should be filed by the student prior to completion of half of the program.</p>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section class="section" id="req-double-stat">
+      <div class="sec-eyebrow"><span class="sec-num">3</span><span class="sec-tag">Degree Requirements</span></div>
+      <h2>Master of Science with Double Major in Agricultural Economics and Statistics</h2>
+      <p>Student must meet at least the minimum requirements for Agricultural Economics and Statistics. This includes graduate work of no fewer than 18 to 24 credit hours in each of the two disciplines, including a thesis equivalent to 6 to 10 credit hours divided equally between the two majors. For each of the majors, students must take at least 8 credits in courses open only to graduate students (800-level or 900-level courses).</p>
+
+      <div class="subsection">
+        <h3>Core Courses</h3>
+        <p>The following courses or their equivalents are required of all students in the M.S. with double major in Agricultural Economics and Statistics:</p>
+        <div class="course-box">
+          <div class="course-box-head">Agricultural Economics</div>
+          <div class="course-row"><span class="course-code">AECN 821</span><span class="course-title">Orientation to Research in Agricultural Economics</span></div>
+          <div class="course-row"><span class="course-code">AECN 872</span><span class="course-title">Mathematical Tools for Applied Economics</span><span class="course-cr">1 sem. hr.</span></div>
+          <div class="course-row"><span class="course-code">AECN 873</span><span class="course-title">Microeconomic Models with Applications</span></div>
+          <div class="course-row"><span class="course-code">AECN 896-003</span><span class="course-title">Applied Econometrics</span></div>
+          <div class="course-note">AECN 896-003 can be replaced by the more advanced ECON 917 (Econometrics I).</div>
+        </div>
+        <div class="course-box">
+          <div class="course-box-head">Statistics — Students must receive grades of B or higher</div>
+          <div class="course-row"><span class="course-code">STAT 882, 883</span><span class="course-title">Mathematical Statistics I, II</span></div>
+          <div class="course-row"><span class="course-code">STAT 810</span><span class="course-title">Alpha Seminar</span></div>
+          <div class="course-row"><span class="course-code">STAT 850</span><span class="course-title">Computing Tools for Statisticians</span></div>
+          <div class="course-row"><span class="course-code">STAT 825</span><span class="course-title">Principles of Statistical Consulting</span></div>
+          <div class="course-row"><span class="course-code">STAT 821, 822, 823</span><span class="course-title">Statistical Methods I–III</span></div>
+        </div>
+      </div>
+
+      <p>Students must obtain proficiency in a statistics computing language, which will be determined by the student's M.S. committee.</p>
+      <p>Students must pass a written comprehensive exam. Additionally, students are required to maintain satisfactory progress towards their degree by maintaining at least a 3.00 GPA.</p>
+      <p>Students must attend departmental seminars in both Agricultural Economics and Statistics departments and participate in a mentoring program.</p>
+
+      <div class="subsection">
+        <h3>M.S. Supervisory Committee</h3>
+        <p>Two mentors (temporary advisors) will be assigned to students before they choose permanent advisors. The mentors and students are expected to work together in developing the student's program for the first two semesters.</p>
+        <p>The student must assemble a committee of two faculty members from the Agricultural Economics department and two faculty members from the Statistics department. The committee is to be co-chaired by a faculty member from each department. The committee must approve the program of study.</p>
+      </div>
+    </section>
+
+    <!-- 4 -->
+    <section class="section" id="req-accel">
+      <div class="sec-eyebrow"><span class="sec-num">4</span><span class="sec-tag">Degree Requirements</span></div>
+      <h2>Accelerated Master's Degree Program</h2>
+      <p>Students must have completed MATH 104/106, ECON 311, ECON 312, and STAT 218 before taking graduate courses.</p>
+      <p>The following schedule allows a student to continue to receive federal financial aid. Students are required to take at least six hours of undergraduate credit to receive federal financial aid. A total of 12 credit hours are required to maintain full-time status.</p>
+      <p>During the fall semester of their senior year, students will take AECN 872, AECN 873, and AECN 821 for a total of five graduate credit hours. Students will also take an additional seven undergraduate credit hours. Spring semester coursework include ECON 417 and an additional graduate elective course, plus six undergraduate credit hours. The following fall, students will take AECN 896 (Applied Econometrics).</p>
+      <p>If federal financial aid is not a consideration, students are encouraged to take AECN 872, AECN 873, AECN 821, and AECN 896 (Applied Econometrics) during the fall semester of their senior year for a total of nine graduate credit hours. Students would then take one graduate elective during the spring semester.</p>
+      <p>An illustration of program duration and timetable is as follows:</p>
+
+      <div class="program-grid">
+        <div class="pg-cell"><span class="yr">Freshman</span><span class="cr">30 Credits</span></div>
+        <div class="pg-cell"><span class="yr">Sophomore</span><span class="cr">30 Credits</span></div>
+        <div class="pg-cell"><span class="yr">Junior</span><span class="cr">30 Credits</span></div>
+        <div class="pg-cell"><span class="yr">Senior</span><span class="cr">30 Credits</span></div>
+        <div class="pg-cell"><span class="yr">Graduate</span><span class="cr">30 Credits</span></div>
+      </div>
+      <div class="pg-sub">
+        <div class="pg-sub-item"><span class="label">Undergraduate hours required</span>120 (includes 12 hours of graduate credit)</div>
+        <div class="pg-sub-item"><span class="label">Graduate hours required</span>30 (12 as an undergrad + 18 as a grad)</div>
+        <div class="pg-sub-item"><span class="label">Recommended application time</span>Junior year (2nd semester)</div>
+        <div class="pg-sub-item"><span class="label">Credit transfer</span>Graduate Studies transfers 12 credits to apply to the graduate degree</div>
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section class="section" id="req-phd">
+      <div class="sec-eyebrow"><span class="sec-num">5</span><span class="sec-tag">Degree Requirements</span></div>
+      <h2>Doctor of Philosophy (Ph.D.) in Agricultural Economics</h2>
+
+      <div class="subsection">
+        <h3>Core Courses</h3>
+        <p>The Ph.D. program approved by the student's supervisory committee must include the following core courses or their equivalents:</p>
+        <div class="course-box">
+          <div class="course-box-head">Ph.D. Core Courses</div>
+          <div class="course-row"><span class="course-code">STAT 880 or STAT 882</span><span class="course-title"></span></div>
+          <div class="course-row"><span class="course-code">ECON 917, 918, 919</span><span class="course-title">Econometrics I, II &amp; III</span></div>
+          <div class="course-row"><span class="course-code">ECON 912A, 912B</span><span class="course-title">Advanced Microeconomics I &amp; II</span></div>
+          <div class="course-row"><span class="course-code">ECON 911A, 911B</span><span class="course-title">Advanced Macroeconomics I &amp; II</span></div>
+          <div class="course-row"><span class="course-code">AECN 901 block</span><span class="course-title">Two courses from the AECN 901 block</span><span class="course-cr">6 cr. hrs.</span></div>
+          <div class="course-row"><span class="course-code">AECN 902 block</span><span class="course-title">Two courses from the AECN 902 block</span><span class="course-cr">6 cr. hrs.</span></div>
+          <div class="course-row"><span class="course-code">M.S. Core</span><span class="course-title">Any M.S. core course not previously taken</span></div>
+        </div>
+      </div>
+
+      <p>In addition to the core requirements, Ph.D. students are expected to:</p>
+      <ul class="doc-list">
+        <li>prepare a department or a conference presentation (or paper) before the fourth year begins</li>
+        <li>have a paper submitted to a peer-reviewed journal before graduating</li>
+      </ul>
+
+      <p>A minimum of 90 semester hours of graduate credit, including the dissertation, is required. Not fewer than 45 semester hours must be completed at the University of Nebraska.</p>
+      <p>Dissertation credit will be granted only on a Pass/No Pass basis. Students registering for dissertation credit should register for the credit hours as Pass/No Pass.</p>
+      <p>Students should study the Graduate Catalog <a href="http://go.unl.edu/gradcatalog">http://go.unl.edu/gradcatalog</a> and be familiar with procedures and deadlines described at <a href="http://www.unl.edu/gradstudies/current/degrees/doctoral">http://www.unl.edu/gradstudies/current/degrees/doctoral</a>.</p>
+
+      <div class="subsection">
+        <h3>Forms</h3>
+        <p>The following forms with associated deadlines are required for candidacy and completion of a doctoral degree. They can be accessed at <a href="http://www.unl.edu/gradstudies/current/degrees/doctoral">http://www.unl.edu/gradstudies/current/degrees/doctoral</a>.</p>
+        <table class="forms-table">
+          <thead><tr><th>#</th><th>Form</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Appointment of the Supervisory Committee</td><td>A student must first select a supervisory committee chair, then identify members of the supervisory committee. The supervisory committee must consist of at least four graduate faculty members, including one NU graduate faculty member from outside the department. The relevant form must be submitted with a minimum of 45 hours of credit remaining to be taken. (<a href="http://www.unl.edu/gradstudies/current/Doctoral-SupCommittee.pdf">http://www.unl.edu/gradstudies/current/Doctoral-SupCommittee.pdf</a>)</td></tr>
+            <tr><td>2</td><td>Program of Studies</td><td>At its initial meeting, the supervisory committee approves the student's program of studies and the general area of research for the dissertation. The program of studies form must be completed and submitted to Graduate Studies within the same semester that the supervisory committee is approved. Students who have completed an M.S. degree before beginning the Ph.D. program can include up to 45 credits from prior M.S. coursework, regardless of whether the M.S. degree was completed at the University of Nebraska. (<a href="http://www.unl.edu/gradstudies/current/Doctoral-Program.pdf">http://www.unl.edu/gradstudies/current/Doctoral-Program.pdf</a>)</td></tr>
+            <tr><td>3</td><td>Application for Admission to Candidacy</td><td>Once the student has completed a substantial number of the credits on his or her program of studies and passed the written comprehensive exams are passed, the student is eligible to apply for doctoral candidacy (<a href="http://www.unl.edu/gradstudies/current/Doctoral-Candidacy.pdf">http://www.unl.edu/gradstudies/current/Doctoral-Candidacy.pdf</a>). The form must be filed at least seven months prior to the student's final oral examination. Candidacy requires a written research proposal and a defense of the proposal to the supervisory committee. Once candidacy is achieved, registration for at least one credit hour is required each academic semester (Fall and Spring) until the student graduates. This requirement stands even if all credit hours, including dissertation, have already been taken. Failure to register will result in a termination of the candidacy and program of study.</td></tr>
+            <tr><td>4</td><td>Application for Degree</td><td>Applications instruction can be found here: <a href="http://registrar.unl.edu/graduation-application">http://registrar.unl.edu/graduation-application</a>. The completed application and payment should be filed with Graduation Services before the deadline date for the expected graduation term (usually the end of the second week of that term).</td></tr>
+            <tr><td>5</td><td>Application for Final Oral Examination</td><td>Once the dissertation is written, approved by the student's committee chair and the two designated readers, the student is eligible to apply for the final oral examination. The form must be filed at least three weeks prior to the scheduled final oral exam (dissertation defense). This form is used by the examination committee to report the results of the exam. (<a href="http://www.unl.edu/gradstudies/current/Doctoral-FinalOral.pdf">http://www.unl.edu/gradstudies/current/Doctoral-FinalOral.pdf</a>)</td></tr>
+            <tr><td>6</td><td>Final Steps</td><td>Upon receipt of the application for final oral exam, final instructions will be provided to the student by Graduate Studies. To ensure that these final steps go smoothly, instructions at <a href="http://www.unl.edu/gradstudies/current/degrees#doctoral">http://www.unl.edu/gradstudies/current/degrees#doctoral</a> should be read with care.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subsection">
+        <h3>Qualifying Examinations</h3>
+        <p>The Ph.D. qualifying examination shall consist of two exams: 1) a microeconomic theory exam based on the content of ECON 912A and ECON 912B, and 2) an economic analysis and application exam designed to test students' ability to use economic theory to analyze important agri-food system issues.</p>
+        <p>The microeconomic theory exam will be administered jointly by the Departments of Agricultural Economics and Economics twice in the summer (typically June and August). Once students have completed the two microeconomic theory courses, they should take the exam the next time it is offered. If a second attempt is necessary, it must take place when the next microeconomic theory exam is offered.</p>
+        <p>The economic analysis and application exam should be taken by students after their program of studies has been substantially completed, normally following the fourth semester in the Ph.D. program. The exam will be administered by the Department of Agricultural Economics in June. If a second attempt is necessary, a retake exam will be offered by early August, and before the fall semester begins. The economic analysis and application exam may also be used as a Departmental written comprehensive exam, at the discretion of the student's supervisory committee. The economic analysis and application exam may also be used as a Departmental written comprehensive exam, at the discretion of the student's supervisory committee. If an exam is not passed after two attempts, then the student cannot continue study for the Ph.D. degree. No additional exams are given. The inability, unwillingness, or failure of a student to complete the examination at the appropriate times will be considered a lack of normal progress in pursuing the degree and could result in termination from graduate study for the Ph.D. in Agricultural Economics.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Comprehensive Examination</h3>
+        <p>Students must pass a written comprehensive examination after their program of studies has been substantially completed, as mandated by Graduate Studies (<a href="https://catalog.unl.edu/graduateprofessional/graduate/degrees/doctoral/#exam">https://catalog.unl.edu/graduateprofessional/graduate/degrees/doctoral/#exam</a>). The examination is administered by the student's supervisory committee and may include an oral exam at the discretion of the supervisory committee. If the student has a minor, the minor department normally administers a comprehensive exam in its field.</p>
+        <p>The student's supervisory committee may elect the qualifying examinations as the written component of the student's comprehensive exam.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Final Oral Examination (Dissertation Defense)</h3>
+        <p>The student's supervisory committee conducts the final oral examination, which normally consists of a dissertation defense. It is open to members of the university and the public, while at the end of the public hearing there will be a closed questioning portion of the exam (<a href="https://catalog.unl.edu/graduateprofessional/graduate/degrees/doctoral/#dissertation">https://catalog.unl.edu/graduateprofessional/graduate/degrees/doctoral/#dissertation</a>).</p>
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section class="section" id="req-joint">
+      <div class="sec-eyebrow"><span class="sec-num">6</span><span class="sec-tag">Degree Requirements</span></div>
+      <h2>Joint Agricultural Economics and Statistics Ph.D.</h2>
+
+      <div class="subsection">
+        <h3>Supervisory Committee</h3>
+        <p>Equal numbers of faculty from each department must serve on the committee. This committee consists of two advisors and two readers, where each department needs to be represented by an advisor and a reader. A faculty member cannot serve as both an advisor and a reader. The committee composition needs to be approved by the graduate chairs from both departments.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Program of Studies</h3>
+        <p>The following courses must be included on the Program of Studies:</p>
+        <ul class="doc-list">
+          <li><strong>Statistics:</strong> All core courses from the M.S. in Statistics program; 15 additional credit hours of 900-level courses, excluding STAT 997 and STAT 999</li>
+          <li><strong>Agricultural Economics:</strong> ECON 917, 918, 919, 912A, 912B, 911A, and 911B; two courses from the AECN 901 offerings and two courses from the AECN 902 offerings</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Dissertation</h3>
+        <p>The dissertation will be developed under the supervision of the advisors on a topic approved by the student's supervisory committee. Students are expected to make meaningful research contributions to both agricultural economics and statistics.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Examinations</h3>
+        <p>Students need to pass the following exams:</p>
+        <ul class="doc-list">
+          <li>The Ph.D. Qualifying and Ph.D. Comprehensive Exams required for a Statistics-only major and for an Agricultural Economics-only major</li>
+          <li>The final oral exam over the dissertation research</li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="sdiv">
+
+    <!-- 7 -->
+    <section class="section" id="progress">
+      <div class="sec-eyebrow"><span class="sec-num">7</span><span class="sec-tag">Policies</span></div>
+      <h2>Progress Reports</h2>
+      <p>All students are required to file yearly progress reports, normally at the end of the spring semester. These reports will include courses taken, grades received, a summary of research, teaching and extension activities, and a status report regarding whether various milestones have been achieved, such as: selection of major professor, appointment of supervisory committee, filing of memorandum of courses, qualifying exams completed, and comprehensive exams/admission to candidacy status. This information must be submitted by the student through their advisor, who is responsible for forwarding it to the graduate committee.</p>
+    </section>
+
+    <!-- 8 -->
+    <section class="section" id="assistantships">
+      <div class="sec-eyebrow"><span class="sec-num">8</span><span class="sec-tag">Policies</span></div>
+      <h2>Assistantships</h2>
+      <p>Graduate research assistantships (GRA) are awarded to full‐time students, normally on an annual basis, either from departmental funds which include Agricultural Research Division (ARD) funds or funds obtained by individual faculty from grants or other sources. GRAs require students to work for a specified number of assistantship hours per week and may or may not entail tuition remission.</p>
+      <p>All GRAs are assigned a research advisor by the graduate committee and department head. The research advisor assigns and supervises their research responsibilities and may also advise on academic issues.</p>
+      <p>Students may choose a major advisor or supervisory committee chair different from their current research advisor. GRAs report on their assistantship activities in their annual report to the graduate committee. Reports from those students receiving ARD funds are forwarded to the chair of the graduate committee, who is responsible for monitoring the use of ARD resources.</p>
+      <p>Students interested in changing to a different advisor are encouraged to visit with the graduate committee chair. The committee graduate chair will work with each student and his/her advisors to implement the change, subject to the approval of the advisor to whom the student wishes to transfer.</p>
+      <p>Assistantship responsibilities may or may not relate directly to the desired topic of thesis or dissertation research. Master's students are expected to choose a major advisor prior to or at the completion of half of the master's program and work closely with the major professor to prepare the thesis proposal. Ph.D. students are expected to choose a supervisory committee chair prior to or at the completion of more than half of the post‐bachelor's program of study (including transfer credits) and work with the major professor to prepare the dissertation proposal.</p>
+      <p>Most graduate students in the Department of Agricultural Economics receive financial assistantships, through either grant or ARD funding. This funding may or may not be for work directly related to a student's MS thesis or dissertation research. The following provides some guidance about work expectations for ARD funding. These guidelines were developed with the expectations of a 12-month assistantship in mind.</p>
+      <p>Assistantships that are provided through grants are managed through the faculty supervisor. While faculty members may use these same guidelines, students should confirm expectations with the faculty supervisor.</p>
+      <ul class="doc-list numbered">
+        <li>Assistantships are based on an expectation of 19.6 hours of work per week for the duration of the assistantship (typically 12 months).</li>
+        <li>Within reason, there is some flexibility for a student to reduce work hours during critical periods (e.g., final exams, qualifiers) with an expectation that the reduced hours are made up during a period without classes (e.g., winter break, summer break). A student should discuss any need for flexibility with his/her supervisor.</li>
+        <li>In addition to the week between Christmas and New Year's Day (the university is closed for this week), students are permitted up to three weeks of vacation away from Lincoln each year. Any additional time away may result in a reduction of funding.</li>
+        <li>Students are expected to get approval from their supervisor when making travel plans in advance of booking tickets.</li>
+        <li>Students are expected to discuss additional research, teaching, and outside opportunities with their supervisor before applying for them.</li>
+        <li>Time away from Lincoln for other research opportunities (e.g., internships) may require a reduction in assistantship funding for the duration of the other opportunity.</li>
+        <li>In the case of extenuating circumstances, students should discuss their leave needs with their supervisor and the graduate committee chair.</li>
+        <li>For students on ARD assistantships, accommodations are available for medical reasons, including (but not limited to): birth of a child, serious health condition of student or spouse, child, or parent, hospitalization, and surgery (see the reasons for taking leave under the UNL FMLA guidelines at <a href="https://hr.unl.edu/er/fmla/">https://hr.unl.edu/er/fmla/</a>). Students on grant-funded assistantships should discuss funding and the situation with their supervisor. All students are expected to maintain communication about such needs with their supervisor.</li>
+      </ul>
+      <p>Once a thesis or dissertation proposal is approved, assistantship efforts are typically credited for the thesis or dissertation research. Guidelines for graduate assistantships are updated by the Office of Graduate Studies annually. See current guidelines at <a href="http://www.unl.edu/gradstudies/current/funding">http://www.unl.edu/gradstudies/current/funding</a>.</p>
+    </section>
+
+    <!-- 9 -->
+    <section class="section" id="evaluation">
+      <div class="sec-eyebrow"><span class="sec-num">9</span><span class="sec-tag">Policies</span></div>
+      <h2>Evaluation, Reappointment, and Reassignment of GRAs</h2>
+      <p>The graduate committee will consider reappointment of graduate assistants after progress reports are submitted at the end of the spring semester, with results announced by early summer. Reappointments will be based on the student's academic record, progress reports, and an evaluation of the research assistant by the research supervisor. M.S. students on ARD funds will automatically be considered for a renewal for a second and final year subject to funding and satisfactory performance. Ph.D. students on ARD funds will be considered for renewal up to a maximum of a fourth year, subject to funding and satisfactory performance. M.S. and Ph.D. students on grant-funded GRAs are eligible for ARD assistantships when grant funding expires if they were recommended by the graduate committee for assistantships upon admission. These students will be eligible for five years total of funding. Normally, renewal of grant-funded GRAs is at the discretion of the faculty member who obtained the grant.</p>
+    </section>
+
+    <!-- 10 -->
+    <section class="section" id="thesis-policies">
+      <div class="sec-eyebrow"><span class="sec-num">10</span><span class="sec-tag">Policies</span></div>
+      <h2>Thesis and Dissertation Policies</h2>
+      <p>Final versions of the thesis or dissertation must be submitted to ProQuest and to UNL Digital Commons. See the steps to completion (Master's Degree or PhD Degree) for more information.</p>
+
+      <div class="subsection">
+        <h3>Academic Leave of Absence</h3>
+        <p>Military leave of up to two weeks per year with pay is granted. If the duration of the leave is more than two weeks, the additional leave is granted as leave without pay. The student is responsible for scheduling any make‐up work with his/her advisor.</p>
+        <p>Students should inform their advisors in advance of their leave intentions. Their advisor must approve annual leave for students on assistantship in advance. Failure to do so may result in leave without pay.</p>
+      </div>
+    </section>
+
+    <!-- 11 -->
+    <section class="section" id="scholastic">
+      <div class="sec-eyebrow"><span class="sec-num">11</span><span class="sec-tag">Policies</span></div>
+      <h2>Scholastic Guidelines</h2>
+      <p>The department's graduate program is designed to help students to further their understanding about the science and philosophy of economics, as well as its practical applications. Students are expected to read widely in the scholarly literature, including journal articles, books, and other related material, during the program. Students are also expected to be good departmental citizens and actively participate in research seminars and related scholarly activities. The graduate program is largely about self‐study on the part of each student, which is enabled by courses that also draw on this same scholarly literature. In terms of specific courses, the goal is to improve student understanding of the science behind each course, as reflected in materials referenced and otherwise made available to students during the course. One indicator of student progress in this quest is given by the grades earned in each course and the overall GPA maintained throughout the program.</p>
+      <p>The graduate committee will assess progress in annual reviews of grades and research accomplishments. Students are expected to maintain a GPA of 3.0 for all graduate courses taken. Even if the GPA is 3.0 or better, however, if grades of less than B are earned in core courses, the student is expected to study these materials on their own, and perhaps even go through such courses a second time, to develop the proficiency needed in these key areas.</p>
+      <p>All students will be placed on probation the first semester that the overall GPA falls below 3.0. After a second consecutive semester with a GPA below 3.0, a student will generally be dismissed from the program after review by the Graduate Committee. The student who is on a GRA or other funding source will also generally lose financial support at this time. Any student who has been dropped from the program may apply to the graduate committee for reinstatement. Reinstatement requires evidence of potential for satisfactory performance. The recommendation of the student's advisor will be a major factor when considering reinstatement.</p>
+    </section>
+
+  </div><!-- /content -->
+
+  <footer id="footer">
+    <strong>Graduate Studies in Agricultural Economics</strong> · University of Nebraska–Lincoln<br>
+    The University of Nebraska does not discriminate based upon any protected status. Please see <a href="https://go.unl.edu/nondiscrimination">go.unl.edu/nondiscrimination</a>.<br>
+    Last Update: March 2022
+  </footer>
+
+</div><!-- /main -->
+
+<script>
+  const sections = document.querySelectorAll('.section[id]');
+  const links = document.querySelectorAll('#sidebar a[href^="#"]');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const match = document.querySelector(`#sidebar a[href="#${e.target.id}"]`);
+        if (match) match.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-15% 0px -75% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Graduate Program — Faculty Resources"
+  open-graph: true
+  navbar:
+    background: "#D00000"
+    foreground: "#FFFFFF"
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Offer Letter
+        href: offer-letter.qmd
+
+format:
+  html:
+    mainfont: sans-serif
+    page-layout: full
+    theme: [cosmo, styles.scss]

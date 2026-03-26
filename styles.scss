@@ -1,0 +1,44 @@
+/*-- scss:defaults --*/
+
+// UNL brand colors
+$unl-scarlet: #D00000;
+$unl-cream:   #F5F1E7;
+
+$body-bg:    #FFFFFF;
+$body-color: rgb(55, 58, 60);
+$link-color: $unl-scarlet;
+
+$font-family-sans-serif: "Source Sans Pro", -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-size-root: 17px;
+
+/*-- scss:rules --*/
+
+// UNL scarlet for headings
+h1, h2, h3 {
+  color: $unl-scarlet;
+}
+
+// Primary buttons use UNL scarlet
+.btn-primary {
+  background-color: $unl-scarlet;
+  border-color: $unl-scarlet;
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: #a80000;
+  border-color: #a80000;
+}
+
+.resource-card {
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid $unl-scarlet;
+  border-radius: 6px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1rem;
+  background: $unl-cream;
+}
+
+.resource-card h3 {
+  margin-top: 0;
+}
