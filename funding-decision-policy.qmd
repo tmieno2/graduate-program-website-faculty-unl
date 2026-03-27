@@ -1,0 +1,38 @@
+---
+title: Funding decision policy
+---
+
+The graduate committee is responsible for allocating departmental fellowships to graduate students each academic year. This document outlines the criteria and process used to make funding decisions.
+
+## Eligibility
+
+To be considered for a departmental fellowship, students must:
+
+- Be enrolled full-time in a graduate degree program (M.S. or Ph.D.)
+- Be in good academic standing (GPA ≥ 3.0)
+- Be making satisfactory progress toward their degree, as determined by their advisor and the graduate committee
+- Not exceed the standard funding period (X years for M.S., X years for Ph.D.)
+
+## Allocation criteria
+
+The graduate committee uses the following criteria when allocating fellowships. These are considered holistically — no single factor is determinative.
+
+1. **Year in program:** Priority is given to students in earlier years of their program, subject to satisfactory progress requirements.
+2. **Academic and research performance:** Evidence of progress includes completed coursework, publications, conference presentations, and advisor evaluations.
+3. **Advisor co-funding:** Students whose advisors contribute partial funding (e.g., from grants) may receive higher priority for departmental support to complete their package.
+4. **Fellowship eligibility:** Students who meet criteria for external fellowships may be nominated or given bridge funding while applications are pending.
+
+## Decision process
+
+1. At the start of each funding cycle, faculty advisors submit funding requests and any co-funding commitments for their students.
+2. The graduate committee reviews all requests alongside available departmental funds.
+3. Fellowship offers are made in priority order based on the criteria above.
+4. Students are notified of their funding status by [deadline].
+
+## Appeals
+
+Students who believe their funding decision was made in error may submit a written appeal to the graduate committee chair within 30 days of notification. Appeals should include any relevant information not previously considered.
+
+## Questions
+
+Questions about the funding process should be directed to the graduate committee chair or the department's graduate coordinator.

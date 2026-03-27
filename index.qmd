@@ -1,8 +1,8 @@
 ---
-title: "Graduate Program — Faculty Resources"
+title: "Graduate Program — Faculty and Stuff Resources"
 ---
 
-A collection of links and documents useful for faculty advising graduate students.
+A collection of links and documents useful for faculty advising graduate students and stuff assisting faculty.
 
 
 ::: {.resource-card}
@@ -24,5 +24,5 @@ Review and evaluate graduate applicants through the admission system.
 Submit a request to generate an offer letter for a new or existing student.
 See the [Offer Letter](offer-letter.qmd) page for more details.
 
-[Submit Offer Letter Request](https://docs.google.com/forms/d/e/1FAIpQLSe0q-LN2kvyNy2Nl7FwMs0C140NnxNQKsWq1M8S4VjGG4QniQ/viewform){.btn .btn-primary}
+[Submit Offer Letter Request](https://docs.google.com/forms/d/e/1FAIpQLSeupuR_eY2r1kgI58g_GwN_kWPKI2zisCxuJLwsuDWDa9odgg/viewform){.btn .btn-primary}
 :::
