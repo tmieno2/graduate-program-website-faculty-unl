@@ -1,45 +1,24 @@
 [
   {
-    "objectID": "funding-decision-policy.html",
-    "href": "funding-decision-policy.html",
-    "title": "Funding decision policy",
+    "objectID": "tution-coverage-ard.html",
+    "href": "tution-coverage-ard.html",
+    "title": "Graduate Program — Faculty Resources",
     "section": "",
-    "text": "The graduate committee is responsible for allocating departmental fellowships to graduate students each academic year. This document outlines the criteria and process used to make funding decisions."
+    "text": "Some funding sources do not allow for paying tuitions. In such a case, a faculty member may ask the graduate committee to cover tuition using ARD funding.\nGraduate students who receive an annual salary above $19,617 automatically receive a tuition waiver for 12 credit hours per semester (Spring, Summer, and Fall). Since all offers we make to students exceed this threshold, tuition waivers are effectively guaranteed for our funded students.\nIf a student takes more than 12 credit hours in a semester, tuition applies to the excess hours. If you have an agreement with the graduate committee to cover a student’s tuition, ARD (Agricultural Research Division) will cover those excess credit hour costs.\n\n\n\nARD covers tuition for excess credit hours up to these annual limits. Costs beyond the cap must be covered by other funding sources (you are responsible).\n\n\n\n\n\n\n\n\nResidency Status\nARD Coverage Cap (per academic year)\nTuition per Credit Hour\nMax Excess Hours Covered\n\n\n\n\nNebraska Resident\n$3,500\n$365\n~9.6 hrs\n\n\nNon-Resident\n$10,000\n$1,066\n~9.4 hrs\n\n\n\n\n\n\n\n\n\nCommunicate Credit Hour Limits to Your Students\n\n\n\nBoth resident and non-resident students can take roughly 9 excess credit hours per year before hitting the ARD cap. Costs beyond the cap fall to other funding sources. Please discuss this with your students and encourage them to avoid overloading their schedule in any single semester.\n\n\n\n\n\nThe caps above are adjusted based on the annual salary offered to the student. The baseline salary is $27,000. If the offered salary exceeds this baseline, the difference is subtracted from the cap.\nFormula: Adjusted Cap = max(0, Base Cap − (Offered Salary − $27,000))\n\nExample adjusted caps by offered salary.\n\n\nOffered Salary\nResident Cap\nNon-Resident Cap\n\n\n\n\n$27,000 (baseline)\n$3,500\n$10,000\n\n\n$30,000\n$500\n$7,000\n\n\n$33,000\n$0\n$4,000\n\n\n\n\n\n\n\n\n\nCommunicate the Adjusted Cap to Your Students\n\n\n\nMake sure your student knows their actual adjusted cap, not just the base cap. If you are offering a salary above $27,000, the tuition coverage available through ARD is reduced accordingly. Students should plan their course loads with their specific cap in mind to avoid unexpected tuition costs."
   },
   {
-    "objectID": "funding-decision-policy.html#eligibility",
-    "href": "funding-decision-policy.html#eligibility",
-    "title": "Funding decision policy",
-    "section": "Eligibility",
-    "text": "Eligibility\nTo be considered for a departmental fellowship, students must:\n\nBe enrolled full-time in a graduate degree program (M.S. or Ph.D.)\nBe in good academic standing (GPA ≥ 3.0)\nBe making satisfactory progress toward their degree, as determined by their advisor and the graduate committee\nNot exceed the standard funding period (X years for M.S., X years for Ph.D.)"
+    "objectID": "tution-coverage-ard.html#tuition-coverage-via-ard-funding",
+    "href": "tution-coverage-ard.html#tuition-coverage-via-ard-funding",
+    "title": "Graduate Program — Faculty Resources",
+    "section": "",
+    "text": "Some funding sources do not allow for paying tuitions. In such a case, a faculty member may ask the graduate committee to cover tuition using ARD funding.\nGraduate students who receive an annual salary above $19,617 automatically receive a tuition waiver for 12 credit hours per semester (Spring, Summer, and Fall). Since all offers we make to students exceed this threshold, tuition waivers are effectively guaranteed for our funded students.\nIf a student takes more than 12 credit hours in a semester, tuition applies to the excess hours. If you have an agreement with the graduate committee to cover a student’s tuition, ARD (Agricultural Research Division) will cover those excess credit hour costs.\n\n\n\nARD covers tuition for excess credit hours up to these annual limits. Costs beyond the cap must be covered by other funding sources (you are responsible).\n\n\n\n\n\n\n\n\nResidency Status\nARD Coverage Cap (per academic year)\nTuition per Credit Hour\nMax Excess Hours Covered\n\n\n\n\nNebraska Resident\n$3,500\n$365\n~9.6 hrs\n\n\nNon-Resident\n$10,000\n$1,066\n~9.4 hrs\n\n\n\n\n\n\n\n\n\nCommunicate Credit Hour Limits to Your Students\n\n\n\nBoth resident and non-resident students can take roughly 9 excess credit hours per year before hitting the ARD cap. Costs beyond the cap fall to other funding sources. Please discuss this with your students and encourage them to avoid overloading their schedule in any single semester.\n\n\n\n\n\nThe caps above are adjusted based on the annual salary offered to the student. The baseline salary is $27,000. If the offered salary exceeds this baseline, the difference is subtracted from the cap.\nFormula: Adjusted Cap = max(0, Base Cap − (Offered Salary − $27,000))\n\nExample adjusted caps by offered salary.\n\n\nOffered Salary\nResident Cap\nNon-Resident Cap\n\n\n\n\n$27,000 (baseline)\n$3,500\n$10,000\n\n\n$30,000\n$500\n$7,000\n\n\n$33,000\n$0\n$4,000\n\n\n\n\n\n\n\n\n\nCommunicate the Adjusted Cap to Your Students\n\n\n\nMake sure your student knows their actual adjusted cap, not just the base cap. If you are offering a salary above $27,000, the tuition coverage available through ARD is reduced accordingly. Students should plan their course loads with their specific cap in mind to avoid unexpected tuition costs."
   },
   {
-    "objectID": "funding-decision-policy.html#allocation-criteria",
-    "href": "funding-decision-policy.html#allocation-criteria",
-    "title": "Funding decision policy",
-    "section": "Allocation criteria",
-    "text": "Allocation criteria\nThe graduate committee uses the following criteria when allocating fellowships. These are considered holistically — no single factor is determinative.\n\nYear in program: Priority is given to students in earlier years of their program, subject to satisfactory progress requirements.\nAcademic and research performance: Evidence of progress includes completed coursework, publications, conference presentations, and advisor evaluations.\nAdvisor co-funding: Students whose advisors contribute partial funding (e.g., from grants) may receive higher priority for departmental support to complete their package.\nFellowship eligibility: Students who meet criteria for external fellowships may be nominated or given bridge funding while applications are pending."
-  },
-  {
-    "objectID": "funding-decision-policy.html#decision-process",
-    "href": "funding-decision-policy.html#decision-process",
-    "title": "Funding decision policy",
-    "section": "Decision process",
-    "text": "Decision process\n\nAt the start of each funding cycle, faculty advisors submit funding requests and any co-funding commitments for their students.\nThe graduate committee reviews all requests alongside available departmental funds.\nFellowship offers are made in priority order based on the criteria above.\nStudents are notified of their funding status by [deadline]."
-  },
-  {
-    "objectID": "funding-decision-policy.html#appeals",
-    "href": "funding-decision-policy.html#appeals",
-    "title": "Funding decision policy",
-    "section": "Appeals",
-    "text": "Appeals\nStudents who believe their funding decision was made in error may submit a written appeal to the graduate committee chair within 30 days of notification. Appeals should include any relevant information not previously considered."
-  },
-  {
-    "objectID": "funding-decision-policy.html#questions",
-    "href": "funding-decision-policy.html#questions",
-    "title": "Funding decision policy",
-    "section": "Questions",
-    "text": "Questions\nQuestions about the funding process should be directed to the graduate committee chair or the department’s graduate coordinator."
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Graduate Program — Faculty and Stuff Resources",
+    "section": "",
+    "text": "A collection of links and documents useful for faculty advising graduate students and stuff assisting faculty.\n\nGraduate Handbook\nThe official handbook covering program requirements, policies, and procedures.\nView Graduate Handbook\n\n\nAdmission System\nReview and evaluate graduate applicants through the admission system.\nVisit the Admission System Website\n\n\nOffer Letter Request Form\nSubmit a request to generate an offer letter for a new or existing student. See the Offer Letter page for more details.\nSubmit Offer Letter Request\n\n\nFunding Prospect Survey\nReport the funding status for each graduate student you are currently supporting in the upcoming academic year.\nSubmit Funding Prospect Survey\n\n\nProgress Report\nSubmit your evaluation of each advisee’s progress for the current academic year.\nSubmit Progress Report\n\n\nGraduate Award Nomination\nNominate a student for the J.B. Hassler Graduate Research Award or the Tomek Outstanding Student Award.\nSubmit Award Nomination"
   },
   {
     "objectID": "offer-letter.html",
@@ -63,10 +42,45 @@
     "text": "After Submission\nOnce the form is submitted:\n\nAn email summary is sent to the Graduate Program Coordinator and staff.\nThe offer letter is generated and shared with you.\n\nFor questions, contact the Graduate Committee Chair at tmieno2@nebraska.edu."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Graduate Program — Faculty and Stuff Resources",
+    "objectID": "funding-decision-policy.html",
+    "href": "funding-decision-policy.html",
+    "title": "ARD Funding decision policy",
     "section": "",
-    "text": "A collection of links and documents useful for faculty advising graduate students and stuff assisting faculty.\n\nGraduate Handbook\nThe official handbook covering program requirements, policies, and procedures.\nView Graduate Handbook\n\n\nAdmission System\nReview and evaluate graduate applicants through the admission system.\nVisit the Admission System Website\n\n\nOffer Letter Request Form\nSubmit a request to generate an offer letter for a new or existing student. See the Offer Letter page for more details.\nSubmit Offer Letter Request\n\n\nFunding Prospect Survey\nReport the funding status for each graduate student you are currently supporting in the upcoming academic year.\nSubmit Funding Prospect Survey"
+    "text": "The graduate committee is responsible for allocating departmental funding to graduate students each academic year. This document outlines the criteria and process used to make funding decisions."
+  },
+  {
+    "objectID": "funding-decision-policy.html#decision-process",
+    "href": "funding-decision-policy.html#decision-process",
+    "title": "ARD Funding decision policy",
+    "section": "Decision process",
+    "text": "Decision process\n\nThe graduate committee distributes a survey to all faculty asking them to indicate funding needs for each of their current students. Any requests that were submitted later than the deadline will be placed at the bottom of priority.\nThe committee removes ineligible requests (see Eligibility above) and determines whether the available ARD funding is sufficient to cover all remaining requests.\nIf funding is insufficient, requests are ranked according to the allocation criteria above and funded in priority order until the budget is exhausted.\nIf ARD funds remain after covering all eligible requests, the committee makes offers to the current pool of incoming applicants within the available budget.\n\n\n\n\n\n\nflowchart TD\n    A([Faculty complete&lt;br/&gt;funding survey]) --&gt; B[Remove ineligible requests]\n    B --&gt; C{Is ARD funding sufficient&lt;br/&gt;to cover all requests?}\n    C -- Yes --&gt; D[Fund all eligible requests]\n    C -- No --&gt; E[Rank requests by&lt;br/&gt;allocation criteria]\n    E --&gt; F[Fund requests in priority&lt;br/&gt;order until budget is exhausted]\n    D --&gt; G{Are ARD funds&lt;br/&gt;remaining?}\n    G -- Yes --&gt; H[Make offers to&lt;br/&gt;incoming applicant pool]\n    G -- No --&gt; I([Process complete])\n    H --&gt; I\n    F --&gt; I\n\n    classDef scarlet fill:#D00000,stroke:#a00000,color:#ffffff,font-size:16px\n    classDef cream fill:#F5F1E7,stroke:#a00000,color:#333333,font-size:16px\n\n    class A,B,D,E,F,H,I scarlet\n    class C,G cream"
+  },
+  {
+    "objectID": "funding-decision-policy.html#earning-an-ard-credit",
+    "href": "funding-decision-policy.html#earning-an-ard-credit",
+    "title": "ARD Funding decision policy",
+    "section": "Earning an ARD credit",
+    "text": "Earning an ARD credit\nSometimes, you cannot identify an applicant who fits well with your research interest even though you have funding to cover a graduate student. If the founder of your project allows for it, you can pay for the current graduate student supported by ARD and earn 1 year GRA credit. You can use that credit to pay for a year of 1 GRA when you need it. This is only when the student will not work for your project (pure monetary swapping)."
+  },
+  {
+    "objectID": "funding-decision-policy.html#expectation-for-bridge-funding-when-bringing-a-new-student-to-the-program",
+    "href": "funding-decision-policy.html#expectation-for-bridge-funding-when-bringing-a-new-student-to-the-program",
+    "title": "ARD Funding decision policy",
+    "section": "Expectation for bridge funding when bringing a new student to the program",
+    "text": "Expectation for bridge funding when bringing a new student to the program\n\n\n\n\n\n\n\n\nYears of funding secured\nARD bridge funding provided\nPermitted to recruit a new student\n\n\n\n\n1 year\nNone\nNo\n\n\n2 years\nUp to 2 years\nNo\n\n\n3 years\n1 year\nYes\n\n\n4 years\nPossible additional year\nYes\n\n\n\n\n1 year of funding secured\nIf you have only one year of funding guaranteed and enroll a student, the department will  NOT  provide ARD funding for the remainder of his/her program under any circumstances. Faculty may not recruit graduate students with the expectation that the department will assume long-term financial responsibility for their support. As an alternative, you may identify a current student in need of funding to work for you, or arrange for a student currently supported by ARD to be covered by your funding, thereby earning an ARD credit to apply toward future departmental support for your student.\n\n\n2 years of funding secured\nIf you have two years of funding guaranteed for an incoming student, the department will provide bridge funding for up to 2 years. However, you will  NOT  be permitted to recruit any additional new students using your own funding, as those resources should be directed toward supporting your current student.\n\n\n3 years of funding secured\nIf you have three years of funding guaranteed for an incoming student, the department is most likely able to provide bridge funding for 1 year as such a student is a top priority as shown below in the table. You are permitted to recruit a new student using your own funding, as you will have provided the student sufficient financial support.\n\n\n4 years of funding secured\nIf you have four years of funding guaranteed for an incoming student, the student is in a strong position to receive an additional year of ARD funding if necessary. You are permitted to recruit a new student using your own funding."
+  },
+  {
+    "objectID": "funding-decision-policy.html#allocation-criteria",
+    "href": "funding-decision-policy.html#allocation-criteria",
+    "title": "ARD Funding decision policy",
+    "section": "Allocation criteria",
+    "text": "Allocation criteria\nThe graduate committee uses the following criteria when allocating fellowships. These are considered holistically.\n\nHistory of funding sources: Students who have received fewer years of ARD funding are given higher priority. The chart below illustrates example funding histories the committee considers.\n\n\nfundingData = [\n  // 1 year total\n  {combination: \"1 Other\",         type: \"Other\", years: 1},\n  // 2 years total\n  {combination: \"2 ARD\",           type: \"ARD\",   years: 2},\n  {combination: \"1 ARD + 1 Other\", type: \"ARD\",   years: 1},\n  {combination: \"1 ARD + 1 Other\", type: \"Other\", years: 1},\n  {combination: \"2 Other\",         type: \"Other\", years: 2},\n  // 3 years total\n  {combination: \"3 ARD\",           type: \"ARD\",   years: 3},\n  {combination: \"2 ARD + 1 Other\", type: \"ARD\",   years: 2},\n  {combination: \"2 ARD + 1 Other\", type: \"Other\", years: 1},\n  {combination: \"1 ARD + 2 Other\", type: \"ARD\",   years: 1},\n  {combination: \"1 ARD + 2 Other\", type: \"Other\", years: 2},\n  {combination: \"3 Other\",         type: \"Other\", years: 3},\n  // 4 years total\n  {combination: \"3 ARD + 1 Other\", type: \"ARD\",   years: 3},\n  {combination: \"3 ARD + 1 Other\", type: \"Other\", years: 1},\n  {combination: \"2 ARD + 2 Other\", type: \"ARD\",   years: 2},\n  {combination: \"2 ARD + 2 Other\", type: \"Other\", years: 2},\n  {combination: \"1 ARD + 3 Other\", type: \"ARD\",   years: 1},\n  {combination: \"1 ARD + 3 Other\", type: \"Other\", years: 3},\n  {combination: \"4 Other\",         type: \"Other\", years: 4},\n  // 5 years total\n  {combination: \"4 ARD\",           type: \"ARD\",   years: 4},\n  {combination: \"5 ARD\",           type: \"ARD\",   years: 5},\n  {combination: \"4 ARD + 1 Other\", type: \"ARD\",   years: 4},\n  {combination: \"4 ARD + 1 Other\", type: \"Other\", years: 1},\n  {combination: \"3 ARD + 2 Other\", type: \"ARD\",   years: 3},\n  {combination: \"3 ARD + 2 Other\", type: \"Other\", years: 2},\n  {combination: \"2 ARD + 3 Other\", type: \"ARD\",   years: 2},\n  {combination: \"2 ARD + 3 Other\", type: \"Other\", years: 3},\n  {combination: \"1 ARD + 4 Other\", type: \"ARD\",   years: 1},\n  {combination: \"1 ARD + 4 Other\", type: \"Other\", years: 4},\n]\n\nPlot.plot({\n  marginLeft: 160,\n  marginRight: 110,\n  width: 650,\n  color: {\n    domain: [\"ARD\", \"Other\"],\n    range: [\"#D00000\", \"#4472C4\"],\n    legend: true\n  },\n  x: {label: \"Years of funding\", tickFormat: d =&gt; d + \"y\"},\n  y: {\n    label: null,\n    domain: [\n      \"3 Other\", \"4 Other\",\n      \"1 ARD + 1 Other\", \"2 Other\",\n      \"1 ARD + 2 Other\",\n      \"1 ARD + 3 Other\",\n      \"1 ARD + 4 Other\",\n      \"2 ARD\", \"2 ARD + 1 Other\", \"2 ARD + 2 Other\", \"2 ARD + 3 Other\",\n      \"3 ARD\", \"3 ARD + 1 Other\", \"3 ARD + 2 Other\",\n      \"4 ARD\", \"4 ARD + 1 Other\", \"1 Other\", \"5 ARD\"\n    ]\n  },\n  marks: [\n    Plot.barX(fundingData, Plot.stackX({\n      x: \"years\",\n      y: \"combination\",\n      fill: \"type\",\n      order: [\"ARD\", \"Other\"],\n      tip: true\n    })),\n    Plot.ruleX([0]),\n    Plot.ruleX([4], {stroke: \"#333\", strokeDasharray: \"4,4\", strokeWidth: 1.5}),\n    Plot.text([{combination: \"5 ARD\", x: 5}, {combination: \"1 Other\", x: 1}], {\n      x: \"x\",\n      y: \"combination\",\n      text: [\"Not eligible\", \"Not eligible\"],\n      dx: 6,\n      textAnchor: \"start\",\n      fontWeight: \"bold\",\n      fontSize: 15,\n      fill: \"#D00000\"\n    })\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAcademic and research performance: Evidence of progress includes completed coursework, publications, conference presentations, and advisor evaluations.\nAdvisor co-funding: Students whose advisors contribute partial funding (e.g., from grants) may receive higher priority for departmental support to complete their package."
+  },
+  {
+    "objectID": "funding-decision-policy.html#questions",
+    "href": "funding-decision-policy.html#questions",
+    "title": "ARD Funding decision policy",
+    "section": "Questions",
+    "text": "Questions\nQuestions about the funding process should be directed to the graduate committee chair at tmieno2@nebraska.edu."
   }
 ]

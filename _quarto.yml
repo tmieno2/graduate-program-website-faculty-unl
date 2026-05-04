@@ -13,6 +13,8 @@ website:
         href: index.qmd
       - text: Offer Letter
         href: offer-letter.qmd
+      # - text: Tuition Coverage Policy
+      #   href: tuition-policy.qmd
 
 format:
   html:

@@ -1,0 +1,43 @@
+## Tuition Coverage via ARD Funding
+
+Some funding sources do not allow for paying tuitions. In such a case, a faculty member may ask the graduate committee to cover tuition using ARD funding. 
+
+Graduate students who receive an annual salary above **$19,617** automatically receive a tuition waiver for **12 credit hours per semester** (Spring, Summer, and Fall). Since all offers we make to students exceed this threshold, tuition waivers are effectively guaranteed for our funded students.
+
+If a student takes more than 12 credit hours in a semester, tuition applies to the excess hours. If you have an agreement with the graduate committee to cover a student's tuition, ARD (Agricultural Research Division) will cover those excess credit hour costs.
+
+### Annual cap on ARD funding to cover tuition
+
+| Residency Status | ARD Coverage Cap (per academic year) | Tuition per Credit Hour | Max Excess Hours Covered |
+|:---|---:|---:|---:|
+| Nebraska Resident | $3,500 | $365 | ~9.6 hrs |
+| Non-Resident | $10,000 | $1,066 | ~9.4 hrs |
+
+: ARD covers tuition for excess credit hours up to these annual limits. Costs beyond the cap must be covered by other funding sources (you are responsible). {.striped}
+
+::: {.callout-important}
+## Communicate Credit Hour Limits to Your Students
+
+Both resident and non-resident students can take roughly **9 excess credit hours per year** before hitting the ARD cap. Costs beyond the cap fall to other funding sources. Please discuss this with your students and encourage them to avoid overloading their schedule in any single semester.
+:::
+
+### Annual cap adjustment based on annual salary
+
+The caps above are adjusted based on the annual salary offered to the student. The baseline salary is **$27,000**. If the offered salary exceeds this baseline, the difference is subtracted from the cap.
+
+**Formula:** Adjusted Cap = max(0, Base Cap − (Offered Salary − $27,000))
+
+| Offered Salary | Resident Cap | Non-Resident Cap |
+|---:|---:|---:|
+| $27,000 (baseline) | $3,500 | $10,000 |
+| $30,000 | $500 | $7,000 |
+| $33,000 | $0 | $4,000 |
+
+: Example adjusted caps by offered salary. {.striped}
+
+::: {.callout-important}
+## Communicate the Adjusted Cap to Your Students
+
+Make sure your student knows their **actual adjusted cap**, not just the base cap. If you are offering a salary above $27,000, the tuition coverage available through ARD is reduced accordingly. Students should plan their course loads with their specific cap in mind to avoid unexpected tuition costs.
+:::
+
